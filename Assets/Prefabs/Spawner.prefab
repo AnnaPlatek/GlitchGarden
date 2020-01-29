@@ -46,4 +46,4 @@ MonoBehaviour:
   spawn: 1
   minSpawnDelay: 1
   maxSpawnDelay: 5
-  Enemy: {fileID: 6330607902297106385, guid: d6b3c34433d28614bae07a5144a925f5, type: 3}
+  Enemy: {fileID: 2539483074022874537, guid: d6b3c34433d28614bae07a5144a925f5, type: 3}
