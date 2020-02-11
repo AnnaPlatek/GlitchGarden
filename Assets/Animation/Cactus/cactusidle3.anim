@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: CactusIdle
+  m_Name: cactusidle3
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -108,7 +108,7 @@ AnimationClip:
     - time: 3.5833333
       value: {fileID: 21300086, guid: 59893fcb8694bd641a0412a1f9a6d6fa, type: 3}
     attribute: m_Sprite
-    path: CactusBody
+    path: 
     classID: 212
     script: {fileID: 0}
   m_SampleRate: 12
