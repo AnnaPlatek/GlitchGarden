@@ -21,7 +21,7 @@ public class Health : MonoBehaviour
     private void TriggerFX() //after deadth 
     {
         if (!FX) {return;} // gra idzie dalej mimo ze particle nie bedzie przeciagniete
-        offset = new Vector3(-0.5f,-0.2f,-1f);
+        offset = new Vector3(0f,0f,-1f);
         GameObject FXObject = Instantiate(FX, transform.position + offset, transform.rotation);
         Destroy(FXObject, 2.5f);
     }

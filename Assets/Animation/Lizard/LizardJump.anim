@@ -70,7 +70,7 @@ AnimationClip:
     - time: 2
       value: {fileID: 21300048, guid: 294dfb9e3d023844298c227bac00984d, type: 3}
     attribute: m_Sprite
-    path: 
+    path: LizardBody
     classID: 212
     script: {fileID: 0}
   m_SampleRate: 12
