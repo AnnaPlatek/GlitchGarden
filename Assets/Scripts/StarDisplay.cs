@@ -25,13 +25,16 @@ public class StarDisplay : MonoBehaviour
         UpdateDisplay();
     }
 
-    public void SubtractStars(int amount)
+    public bool SubtractStars(int amount)
     {
         if (stars>=amount)
         {
             stars -= amount;
             UpdateDisplay();
+            return true;
         }
+
+        return false;
         
     }
 
