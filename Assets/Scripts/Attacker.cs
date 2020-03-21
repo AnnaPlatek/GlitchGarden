@@ -46,4 +46,15 @@ public class Attacker : MonoBehaviour
             health.DealDamage(damage);
         }
     }
+
+    private void OnTriggerEnter2D(Collider2D otherCollider)
+    {
+        //atakujacy znika gdy dojdzie do konca
+        GameObject otherObject = otherCollider.gameObject;
+
+        if (otherObject.GetComponent<BaseCollider>())
+        {
+            Destroy(gameObject);
+        }
+    }
 }
