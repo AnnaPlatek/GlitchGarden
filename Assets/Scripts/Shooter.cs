@@ -19,12 +19,12 @@ public class Shooter : MonoBehaviour
     {
         if (IsAttacherInLane())
         {
-            Debug.Log("Attacher in lane! Shoot!");
+            //Debug.Log("Attacher in lane! Shoot!");
             animator.SetBool("IsAttacking", true);
         }
         else
         {
-            Debug.Log("No attacher in lane! Relax!");
+            //Debug.Log("No attacher in lane! Relax!");
             animator.SetBool("IsAttacking", false);
         }
     }
