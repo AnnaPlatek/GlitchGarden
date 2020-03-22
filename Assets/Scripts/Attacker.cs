@@ -14,7 +14,11 @@ public class Attacker : MonoBehaviour
 
     private void OnDestroy()
     {
-        FindObjectOfType<LevelController>().AttackerKilled();
+        LevelController levelController = FindObjectOfType<LevelController>();
+        if (levelController != null)
+        {
+            FindObjectOfType<LevelController>().AttackerKilled();
+        }
     }
 
     // Update is called once per frame

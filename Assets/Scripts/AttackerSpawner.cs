@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class AttackerSpawner : MonoBehaviour
 {
-    [SerializeField] bool spawn = true;
-    [SerializeField] float minSpawnDelay = 1f;
-    [SerializeField] float maxSpawnDelay = 5f;
-    [SerializeField] Attacker[] EnemyArray;
+    [SerializeField] public bool spawn = true;
+    [SerializeField] public float minSpawnDelay = 1f;
+    [SerializeField] public float maxSpawnDelay = 5f;
+    [SerializeField] public Attacker[] EnemyArray;
 
 
     IEnumerator Start()

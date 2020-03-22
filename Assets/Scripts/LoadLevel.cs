@@ -8,8 +8,8 @@ public class LoadLevel : MonoBehaviour
 {
     int currentSceneIndex;
     [SerializeField] int timeToWait = 5;
-    public Button startGameButton;
-    public Button playAgainButton;
+    //public Button startGameButton;
+    //public Button playAgainButton;
     
     // Start is called before the first frame update
     void Start()
@@ -20,15 +20,15 @@ public class LoadLevel : MonoBehaviour
             StartCoroutine(WaitForTime());
         }
 
-        if (startGameButton)
-        {
-            startGameButton.onClick.AddListener(LoadNextLevel);
-        }
-
-        if (playAgainButton)
-        {
-            playAgainButton.onClick.AddListener(Restart);
-        }
+     //   if (startGameButton)
+     //   {
+     //       startGameButton.onClick.AddListener(LoadNextLevel);
+     //   }
+     //
+     //   if (playAgainButton)
+     //   {
+     //       playAgainButton.onClick.AddListener(Restart);
+     //   }
         
         
     }

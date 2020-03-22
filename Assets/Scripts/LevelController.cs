@@ -6,8 +6,8 @@ using UnityEngine;
 
 public class LevelController : MonoBehaviour
 {
-    [SerializeField] GameObject winLabel;
-    [SerializeField] GameObject lostLabel;
+    [SerializeField] public GameObject winLabel;
+    [SerializeField] public GameObject lostLabel;
     int numberOfAttackers = 0;
     bool levelTimeFinished = false;
     int timeToWait = 4;
@@ -31,16 +31,23 @@ public class LevelController : MonoBehaviour
         {
             //Debug.Log("End Level Now");
             StartCoroutine(WaitForTime());
-            winLabel.SetActive(true);
-            GetComponent<AudioSource>().Play();
-            
+
+            if (winLabel != null)
+            {
+                winLabel.SetActive(true);
+                GetComponent<AudioSource>().Play();
+            }
         }
     }
 
     public void ShowLevelLost()
     {
-        lostLabel.SetActive(true);
-        Time.timeScale = 0;
+        if (lostLabel != null)
+        {
+            lostLabel.SetActive(true);
+            Time.timeScale = 0;
+        }
+ 
     }
 
     IEnumerator WaitForTime()

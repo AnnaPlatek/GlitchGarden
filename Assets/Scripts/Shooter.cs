@@ -5,7 +5,7 @@ using UnityEngine;
 public class Shooter : MonoBehaviour
 {
 
-    [SerializeField] GameObject projectile, gun;
+    [SerializeField] public GameObject projectile, gun;
     AttackerSpawner myLaneSpawner;
     Animator animator;
 

@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Health : MonoBehaviour
 {
-    [SerializeField] float health = 100f;
-    [SerializeField] GameObject FX; //particle effect
+    [SerializeField] public float health = 100f;
+    [SerializeField] public GameObject FX; //particle effect
     Vector3 offset;
 
     public void DealDamage(float damage)

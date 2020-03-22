@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DefenderButton : MonoBehaviour
 {
-    [SerializeField] Defender defenderPrefab;
+    [SerializeField] public Defender defenderPrefab;
 
     private void OnMouseDown()
     {
