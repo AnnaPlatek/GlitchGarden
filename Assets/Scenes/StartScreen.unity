@@ -737,7 +737,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1493568249}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1977401061}
+        m_MethodName: QuitGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!1 &1608575767
@@ -880,3 +891,15 @@ PrefabInstance:
       objectReference: {fileID: 52829351}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4dad6c8465969e4cae970e634f477b0, type: 3}
+--- !u!114 &1977401061 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6055146122112333845, guid: c4dad6c8465969e4cae970e634f477b0,
+    type: 3}
+  m_PrefabInstance: {fileID: 1977401060}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c1c760121c1ddd46b8fd8aed4ead26e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

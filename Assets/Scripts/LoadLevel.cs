@@ -54,4 +54,22 @@ public class LoadLevel : MonoBehaviour
         //load Level 1 after click on "Play again" button
         SceneManager.LoadScene("Level1");
     }
+
+    public void ReloadSameLevel()
+    {
+        Time.timeScale = 1;
+        SceneManager.LoadScene(currentSceneIndex);
+    }
+
+    public void LoadMainMenu()
+    {
+        Time.timeScale = 1;
+        SceneManager.LoadScene("StartScreen");
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
+
 }

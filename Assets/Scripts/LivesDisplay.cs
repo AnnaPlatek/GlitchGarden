@@ -27,7 +27,8 @@ public class LivesDisplay : MonoBehaviour
 
         if (lives <=0)
         {
-            FindObjectOfType<LoadLevel>().LoadLoseScreen();
+            FindObjectOfType<LevelController>().ShowLevelLost();
+            //FindObjectOfType<LoadLevel>().LoadLoseScreen();
         }
     }
 
