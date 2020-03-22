@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class LevelController : MonoBehaviour
 {
     int numberOfAttackers = 0;
@@ -20,6 +21,7 @@ public class LevelController : MonoBehaviour
         if (numberOfAttackers<=0 && levelTimeFinished)
         {
             Debug.Log("End Level Now");
+            FindObjectOfType<LoadLevel>().LoadNextLevel();
         }
     }
 
@@ -39,4 +41,6 @@ public class LevelController : MonoBehaviour
         }
 
     }
+
+
 }

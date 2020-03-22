@@ -2,11 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class LoadLevel : MonoBehaviour
 {
     int currentSceneIndex;
     [SerializeField] int timeToWait = 5;
+    public Button startGameButton;
+    public Button playAgainButton;
     
     // Start is called before the first frame update
     void Start()
@@ -16,6 +19,18 @@ public class LoadLevel : MonoBehaviour
         {
             StartCoroutine(WaitForTime());
         }
+
+        if (startGameButton)
+        {
+            startGameButton.onClick.AddListener(LoadNextLevel);
+        }
+
+        if (playAgainButton)
+        {
+            playAgainButton.onClick.AddListener(Restart);
+        }
+        
+        
     }
 
     IEnumerator WaitForTime()
@@ -32,5 +47,11 @@ public class LoadLevel : MonoBehaviour
     public void LoadLoseScreen()
     {
         SceneManager.LoadScene("LoseScreen");
+    }
+
+    public void Restart()
+    {
+        //load Level 1 after click on "Play again" button
+        SceneManager.LoadScene("Level1");
     }
 }
