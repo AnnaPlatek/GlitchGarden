@@ -72,4 +72,9 @@ public class LoadLevel : MonoBehaviour
         Application.Quit();
     }
 
+    public void LoadOptionsScreen()
+    {
+        SceneManager.LoadScene("OptionsScreen");
+    }
+
 }
