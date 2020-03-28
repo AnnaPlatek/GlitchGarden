@@ -64,6 +64,11 @@ public class LoadLevel : MonoBehaviour
     public void LoadMainMenu()
     {
         Time.timeScale = 1;
+        if (FindObjectOfType<MusicPlayer>() != null)
+        {
+            Destroy(FindObjectOfType<MusicPlayer>().gameObject);
+        }
+        
         SceneManager.LoadScene("StartScreen");
     }
 

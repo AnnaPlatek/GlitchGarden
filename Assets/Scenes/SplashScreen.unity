@@ -385,7 +385,7 @@ GameObject:
   - component: {fileID: 1389764909}
   - component: {fileID: 1389764908}
   m_Layer: 0
-  m_Name: MusicPlayer
+  m_Name: SplashScreenMusicPlayer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

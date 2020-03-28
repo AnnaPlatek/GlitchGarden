@@ -12,7 +12,7 @@ public class PlayerPrefsController : MonoBehaviour
 
     public static void SetMasterVolume (float volume)
     {
-        if (volume >= MAX_VOLUME && volume <= MIN_VOLUME)
+        if (volume >= MIN_VOLUME && volume <= MAX_VOLUME)
         {
             Debug.Log("Master volume is set to: " + volume);
             PlayerPrefs.SetFloat(MASTER_VOLUME_KEY, volume);
@@ -23,7 +23,7 @@ public class PlayerPrefsController : MonoBehaviour
         }
     }
 
-    public static float GetMasterKey()
+    public static float GetMasterVolume()
     {
         return PlayerPrefs.GetFloat(MASTER_VOLUME_KEY);
     }
