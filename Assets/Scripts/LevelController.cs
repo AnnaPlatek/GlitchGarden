@@ -21,12 +21,14 @@ public class LevelController : MonoBehaviour
     public void AttackerSpawned()
     {
         numberOfAttackers++;
+        FindObjectOfType<NumberOfAttackersDisplay>().UpdateNumberOfAttackersDisplay();
     }
 
     public void AttackerKilled()
     {
         //Debug.Log("Attacker Killed");
         numberOfAttackers--;
+        FindObjectOfType<NumberOfAttackersDisplay>().UpdateNumberOfAttackersDisplay();
         if (numberOfAttackers<=0 && levelTimeFinished)
         {
             //Debug.Log("End Level Now");
@@ -72,6 +74,11 @@ public class LevelController : MonoBehaviour
             spawner.StopSpawning();
         }
 
+    }
+
+    public int ShowNumberOfAttackers()
+    {
+        return numberOfAttackers;
     }
 
 

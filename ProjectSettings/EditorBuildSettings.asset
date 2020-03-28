@@ -21,11 +21,11 @@ EditorBuildSettings:
     path: Assets/Scenes/Level3.unity
     guid: 6a02770229ea6cc47bdff6200bb01d6f
   - enabled: 1
-    path: Assets/Scenes/OptionsScreen.unity
-    guid: 64dcd326e0b33644188a3c5e9a3a74ba
-  - enabled: 1
     path: Assets/Scenes/WinScreen.unity
     guid: ee518a2ddedc48042adefa8528e32a1e
+  - enabled: 1
+    path: Assets/Scenes/OptionsScreen.unity
+    guid: 64dcd326e0b33644188a3c5e9a3a74ba
   - enabled: 1
     path: Assets/Scenes/LoseScreen.unity
     guid: d1c7d8310d3942c4386124fe1e847b82
