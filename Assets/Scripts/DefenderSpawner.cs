@@ -35,14 +35,24 @@ public class DefenderSpawner : MonoBehaviour
 
     private void SpawnDefender(Vector2 roundedPos)
     {
-        if (FindObjectOfType<StarDisplay>().SubtractStars(defender.starCost)==true)
+        if (defender != null)
         {
-            Defender newDefender = Instantiate(defender, roundedPos, Quaternion.identity) as Defender;
+            if (FindObjectOfType<StarDisplay>().SubtractStars(defender.starCost) == true)
+            {
+                Defender newDefender = Instantiate(defender, roundedPos, Quaternion.identity) as Defender;
+            }
+
+            else
+            {
+                Debug.Log("not enough stars");
+            }
         }
 
-       else
+        else
         {
-            Debug.Log("not enough stars");
+            return;
         }
+
+
     }
 }
