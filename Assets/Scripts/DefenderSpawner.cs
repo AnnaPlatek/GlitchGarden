@@ -1,10 +1,28 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class DefenderSpawner : MonoBehaviour
 {
-    [SerializeField] Defender defender;
+    Defender defender;
+    GameObject defenderParent;
+    const string DEFENDER_PARENT_NAME = "Defenders";
+
+    private void Start()
+    {
+        CreateDefenderParent();
+    }
+
+    private void CreateDefenderParent()
+    {
+        defenderParent = GameObject.Find(DEFENDER_PARENT_NAME);
+        if (!defenderParent)
+        {
+            defenderParent = new GameObject(DEFENDER_PARENT_NAME);
+        }
+
+    }
 
     private void OnMouseDown()
     {
@@ -40,6 +58,7 @@ public class DefenderSpawner : MonoBehaviour
             if (FindObjectOfType<StarDisplay>().SubtractStars(defender.starCost) == true)
             {
                 Defender newDefender = Instantiate(defender, roundedPos, Quaternion.identity) as Defender;
+                newDefender.transform.parent = defenderParent.transform;
             }
 
             else
