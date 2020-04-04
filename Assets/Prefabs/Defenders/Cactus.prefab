@@ -78,7 +78,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17816997711a4884b8d2eac63891c1f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  starCost: 50
+  starCost: 25
 --- !u!95 &1669724378
 Animator:
   serializedVersion: 3
@@ -151,7 +151,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d45c55c327a39ca418326a359d5164de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 50
+  health: 100
   FX: {fileID: 0}
 --- !u!1 &4310135667980872173
 GameObject:

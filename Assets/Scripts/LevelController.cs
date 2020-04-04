@@ -11,6 +11,7 @@ public class LevelController : MonoBehaviour
     int numberOfAttackers = 0;
     bool levelTimeFinished = false;
     int timeToWait = 4;
+    bool levelEnd = false;
 
     public void Start()
     {
@@ -29,9 +30,15 @@ public class LevelController : MonoBehaviour
         //Debug.Log("Attacker Killed");
         numberOfAttackers--;
         FindObjectOfType<NumberOfAttackersDisplay>().UpdateNumberOfAttackersDisplay();
-        if (numberOfAttackers<=0 && levelTimeFinished)
+        EndLevel();
+    }
+
+    private void EndLevel()
+    {
+        if (numberOfAttackers <= 0 && levelTimeFinished)
         {
             //Debug.Log("End Level Now");
+            levelEnd = true;
             StartCoroutine(WaitForTime());
 
             if (winLabel != null)
@@ -63,6 +70,7 @@ public class LevelController : MonoBehaviour
     {
         levelTimeFinished = true;
         StopSpawners();
+        EndLevel();
         Debug.Log("StopSpawners");
     }
 
@@ -81,5 +89,9 @@ public class LevelController : MonoBehaviour
         return numberOfAttackers;
     }
 
-
+    private void Update()
+    {
+        Debug.Log(levelTimeFinished);
+        Debug.Log(levelEnd);
+    }
 }
